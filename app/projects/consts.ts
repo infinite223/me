@@ -5,7 +5,7 @@ export type Project = {
   createdAt: Date;
   image:
     | "carsdesignStart"
-    | "scheduleWorkStart"
+    | "scheduleApp"
     | "portfolio"
     | "kaban"
     | "monkey"
@@ -99,7 +99,7 @@ export const myProjects: Project[] = [
       myTechnologies[12],
       myTechnologies[13],
     ],
-    image: "scheduleWorkStart",
+    image: "scheduleApp",
     links: {
       linkToGithub: "https://github.com/infinite223/Schedule-work-app",
       linkToLiveapp: "https://schedulework-preview.netlify.app/",

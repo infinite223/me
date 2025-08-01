@@ -14,7 +14,26 @@ import {
 import { bestProjects } from "./projects/consts";
 import { ChevronRight } from "lucide-react";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import scheduleApp from "../assets/scheduleApp.png";
+import carsdesignStart from "../assets/carsdesignStart.png";
+import kaban from "../assets/kaban_board_screen.png";
+import monkey from "../assets/monkey.png";
 
+function getImageByName(name: string) {
+  switch (name) {
+    case "carsdesignStart":
+      return carsdesignStart;
+    case "scheduleApp":
+      return scheduleApp;
+    case "kaban":
+      return kaban;
+    case "monkey":
+      return monkey;
+    default:
+      return scheduleApp; // fallback
+  }
+}
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6 md:px-6 pt-6">
@@ -31,11 +50,6 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold">
             Hej 👋, nazywam się Dawid Szmigiel!
           </h1>
-          {/* <div className="flex gap-3 items-center">
-            <button className="bg-zinc-800 rounded-md text-white px-6 py-2 text-sm">
-              Kontakt
-            </button>
-          </div> */}
         </div>
 
         <p className="mt-2 text-gray-600 max-w-4xl">
@@ -60,14 +74,13 @@ export default function HomePage() {
       </div>
 
       <SectionHeader title="O mnie" />
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white rounded-md p-6 shadow-sm">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
             <HiAcademicCap className="mr-2" />
             Wykształcenie
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1 ml-3">
+          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5">
             <li>Magister informatyki - Politechnika Opolska</li>
             <li>Inżynier informatyki - Politechnika Opolska</li>
             <li>Technikum informatyczne</li>
@@ -79,7 +92,7 @@ export default function HomePage() {
             <HiBriefcase className="mr-2" />
             Doświadczenie
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1 ml-3">
+          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5">
             <li>1,5 roku jako Junior developer w Codefusion</li>
             <li>2 miesiące stażu w Codefusion</li>
             <li>1 miesiąc praktyk w Codefusion</li>
@@ -92,7 +105,7 @@ export default function HomePage() {
             <HiHeart className="mr-2" />
             Hobby
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1 ml-3">
+          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5">
             <li>Motoryzacja</li>
             <li>Tuning samochodów</li>
             <li>E-Sport</li>
@@ -105,8 +118,14 @@ export default function HomePage() {
             <HiBadgeCheck className="mr-2" />
             Certyfikaty / uprawnienia
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1 ml-3">
-            <li>–</li>
+          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5 text-pretty">
+            <li>
+              Szkolenie - Programowanie C++ organizowane przez SME training
+              Karwatka
+            </li>
+            <li>AZ-104: Deploy and manage Azure compute resources</li>
+            <li>AZ-104: Monitor and back up Azure resources</li>
+            <li>Kwalifikacje E12/E13/E14</li>
           </ul>
         </div>
       </div>
@@ -117,14 +136,16 @@ export default function HomePage() {
         {bestProjects.map((p, i) => (
           <div
             key={i}
-            className="relative group bg-gray-50 hover:bg-blue-50 transition-all rounded-md overflow-hidden"
+            className="relative group rounded-md overflow-hidden hover:cursor-pointer bg-zinc-100/90"
           >
-            {/* Wrapper z proporcją 4:3 (75% = 3/4 wysokości) */}
-            <div className="w-full pt-[75%]"></div>
+            <Image
+              alt="schedule app"
+              src={getImageByName(p.image)}
+              className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-85"
+            />
 
-            {/* Wnętrze – absolutne pozycjonowanie */}
-            <div className="absolute inset-0 flex items-center justify-center p-4">
-              <span className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+            <div className="absolute inset-0 flex items-center justify-center bg-opacity-0 group-hover:bg-opacity-30 transition duration-300">
+              <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-2xl transition duration-300">
                 {p.name}
               </span>
             </div>
