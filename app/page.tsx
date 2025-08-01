@@ -80,7 +80,7 @@ export default function HomePage() {
             Doświadczenie
           </h3>
           <ul className="list-disc list-inside text-gray-700 space-y-1 ml-3">
-            <li>2 lata jako Junior Developer</li>
+            <li>1,5 roku jako Junior developer w Codefusion</li>
             <li>2 miesiące stażu w Codefusion</li>
             <li>1 miesiąc praktyk w Codefusion</li>
             <li>4 lata tworzenia własnych projektów</li>
@@ -96,6 +96,7 @@ export default function HomePage() {
             <li>Motoryzacja</li>
             <li>Tuning samochodów</li>
             <li>E-Sport</li>
+            <li>Fotografia</li>
           </ul>
         </div>
 
@@ -186,6 +187,15 @@ export default function HomePage() {
             </a>
           </li>
         </ul>
+
+        <div className="flex flex-col border-t-2 border-zinc-200 pt-5 justify-center items-center w-full text-xs self-center gap-2 mt-5">
+          <div className="font-semibold">Dawid Szmigiel IT Solutions</div>
+          <div className="flex gap-4 items-center">
+            <div className="">NIP: 5761599645</div>
+
+            <div className="">REGON: 542171897</div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { LuUser, LuFolder, LuPackage, LuMail } from "react-icons/lu";
 import { ChevronRight, Menu, X } from "lucide-react";
+import Me from "../assets/me.jpg";
+import Image from "next/image";
 
 const iconSize = 23;
 
@@ -32,9 +34,12 @@ const Sidebar = () => {
     <>
       {/* Desktop */}
       <aside className="w-64 bg-white p-6 hidden md:flex flex-col rounded-xl sticky top-5 self-start h-[calc(100vh-40px)]">
-        <div className="mb-12">
-          <h2 className="text-xl font-semibold">Dawid Szmigiel</h2>
-          <p className="text-sm text-gray-500">Creative Developer</p>
+        <div className="mb-12 flex items-center gap-3">
+          <Image alt="me" src={Me} className="w-12 h-12 rounded-full" />
+          <div className="flex flex-col">
+            <h2 className="text-xl font-semibold">Dawid Szmigiel</h2>
+            <p className="text-sm text-gray-500">Creative Developer</p>
+          </div>
         </div>
         <div className="flex flex-col justify-between h-full">
           <NavLinks />
@@ -44,9 +49,12 @@ const Sidebar = () => {
 
       {/* Mobile top bar */}
       <div className="md:hidden bg-white flex justify-between rounded-md items-center px-4 py-3 h-min w-full shadow z-20 sticky top-5">
-        <div>
-          <h2 className="text-lg font-semibold">Dawid Szmigiel</h2>
-          <p className="text-xs text-gray-500">Creative Developer</p>
+        <div className="flex items-center gap-3">
+          <Image alt="me" src={Me} className="w-12 h-12 rounded-full" />
+          <div className="flex flex-col">
+            <h2 className="text-xl font-semibold">Dawid Szmigiel</h2>
+            <p className="text-sm text-gray-500">Creative Developer</p>
+          </div>
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
