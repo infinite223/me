@@ -5,7 +5,7 @@ import { fullStack } from "./consts";
 
 export default function StackPage() {
   return (
-    <div className="flex flex-col gap-6 md:px-6 pt-6">
+    <div className="flex flex-col gap-6 md:px-6">
       <div>
         <h1 className="text-3xl font-semibold">Stack</h1>
 

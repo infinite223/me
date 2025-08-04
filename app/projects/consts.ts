@@ -1,7 +1,41 @@
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiDotnet,
+  SiExpo,
+  SiTailwindcss,
+  SiRedux,
+  SiFirebase,
+  SiVuedotjs,
+  SiCss3,
+  SiSass,
+} from "react-icons/si";
+
+import { IconType } from "react-icons";
+
+export const iconMap: Record<string, IconType> = {
+  React: SiReact,
+  "React Native": SiReact,
+  TypeScript: SiTypescript,
+  JavaScript: SiJavascript,
+  "react-native-game-engine": SiReact,
+  Expo: SiExpo,
+  ".Net core": SiDotnet,
+  Firebase: SiFirebase,
+  Redux: SiRedux,
+  Vue: SiVuedotjs,
+  Css: SiCss3,
+  SCSS: SiSass,
+  Scss: SiSass,
+  Tailwind: SiTailwindcss,
+};
+
 export type Project = {
   name: string;
+  slug: string;
   description: string;
-  technologies: { id: number; name: string; icon: string }[];
+  technologies: { id: number; name: string; icon: IconType; color: string }[];
   createdAt: Date;
   image:
     | "carsdesignStart"
@@ -19,23 +53,27 @@ export type Project = {
   };
 };
 
-export const myTechnologies = [
-  { id: 0, name: "React", icon: "" },
-  { id: 1, name: "React Native", icon: "" },
-  { id: 2, name: "Expo", icon: "" },
-  { id: 3, name: "Firebase", icon: "" },
-  { id: 4, name: "Scss", icon: "" },
-  { id: 5, name: "Redux", icon: "" },
-  { id: 6, name: "Vue", icon: "" },
-  { id: 7, name: "Framer motion", icon: "" },
-  { id: 8, name: ".Net core", icon: "" },
-  { id: 9, name: "react-native-game-engine", icon: "" },
-  { id: 10, name: "TypeScript", icon: "" },
-  { id: 11, name: "Css", icon: "" },
-  { id: 12, name: "JavaScript", icon: "" },
-  { id: 13, name: "Tailwind", icon: "" },
+export const myTechnologies: {
+  id: number;
+  name: string;
+  icon: IconType;
+  color: string;
+}[] = [
+  { id: 0, name: "React", icon: SiReact, color: "#61DAFB" },
+  { id: 1, name: "React Native", icon: SiReact, color: "#61DAFB" },
+  { id: 2, name: "Expo", icon: SiExpo, color: "#000020" },
+  { id: 3, name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+  { id: 4, name: "Scss", icon: SiSass, color: "#CD6799" },
+  { id: 5, name: "Redux", icon: SiRedux, color: "#764ABC" },
+  { id: 6, name: "Vue", icon: SiVuedotjs, color: "#42b883" },
+  { id: 7, name: "Framer motion", icon: SiReact, color: "#e6e6e6" },
+  { id: 8, name: ".Net core", icon: SiDotnet, color: "#512bd4" },
+  { id: 9, name: "react-native-game-engine", icon: SiReact, color: "#61DAFB" },
+  { id: 10, name: "TypeScript", icon: SiTypescript, color: "#3178c6" },
+  { id: 11, name: "Css", icon: SiCss3, color: "#264de4" },
+  { id: 12, name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
+  { id: 13, name: "Tailwind", icon: SiTailwindcss, color: "#06b6d4" },
 ];
-
 export const latestProject = {
   name: "ScheduleWork",
   description:
@@ -57,12 +95,12 @@ export const latestProject = {
     linkToLiveapp: "https://schedulework-preview.netlify.app/",
   },
 };
-
 export const myProjects: Project[] = [
   {
     name: "Cars design",
+    slug: "cars-design",
     description:
-      "Cars design it is a web and mobile application built to connect the automotive community. Users can share their car designs, add the necessary parameters, photos, components and more. The application also allows you to create spots, write with others.",
+      "Cars design to aplikacja webowa i mobilna stworzona z myślą o społeczności motoryzacyjnej. Użytkownicy mogą dzielić się projektami swoich samochodów, dodawać potrzebne parametry, zdjęcia, komponenty i wiele więcej. Aplikacja pozwala również tworzyć spoty i rozmawiać z innymi.",
     createdAt: new Date(),
     type: "all",
     technologies: [
@@ -84,8 +122,9 @@ export const myProjects: Project[] = [
   },
   {
     name: "Schedule Work (v3)",
+    slug: "schedule-work-v3",
     description:
-      "A mobile and web application for managing the work schedule of employees. It makes it easier to record employees in the work schedule. The application allows you to divide into groups, quickly view the next working days and other co-workers.",
+      "Aplikacja mobilna i webowa do zarządzania grafikiem pracy pracowników. Ułatwia zapisywanie pracowników w grafiku. Aplikacja pozwala na tworzenie grup, szybki podgląd najbliższych dni roboczych i współpracowników.",
     createdAt: new Date(),
     type: "all",
     technologies: [
@@ -107,8 +146,9 @@ export const myProjects: Project[] = [
   },
   {
     name: "Kaban",
+    slug: "kaban",
     description:
-      "Kaban is an application designed to provide the capabilities of the kanban table. The entire board in the application for a given project is updated dynamically so that users do not have to refresh the application",
+      "Kaban to aplikacja zaprojektowana z myślą o funkcjonalnościach tablicy kanban. Cała tablica dla danego projektu jest dynamicznie aktualizowana, dzięki czemu użytkownicy nie muszą odświeżać aplikacji.",
     createdAt: new Date(),
     type: "Mobile app",
     technologies: [
@@ -127,8 +167,9 @@ export const myProjects: Project[] = [
   },
   {
     name: "J-Monkey",
+    slug: "j-monkey",
     description:
-      "J-monkey is a simple mobile game. Inspired by the popular Flappy Bird game",
+      "J-monkey to prosta gra mobilna inspirowana popularną grą Flappy Bird.",
     createdAt: new Date(),
     type: "Mobile app",
     technologies: [
@@ -148,8 +189,9 @@ export const myProjects: Project[] = [
   },
   {
     name: "Work schedule (v2)",
+    slug: "work-schedule-v2",
     description:
-      "Work schedule - It is a web application that offers creating a work schedule, inviting employees and enabling them to sign up for work on a given day and time.",
+      "Work schedule to aplikacja webowa, która umożliwia tworzenie grafiku pracy, zapraszanie pracowników i pozwala im zapisywać się na dyżury w wybrane dni i godziny.",
     createdAt: new Date(),
     type: "Web app",
     technologies: [
@@ -170,7 +212,9 @@ export const myProjects: Project[] = [
   },
   {
     name: "Download songs",
-    description: "Simple app to search for songs on youtube and download them.",
+    slug: "download-songs",
+    description:
+      "Prosta aplikacja do wyszukiwania piosenek na YouTube i ich pobierania.",
     createdAt: new Date(),
     type: "Web app",
     technologies: [myTechnologies[0], myTechnologies[11], myTechnologies[12]],
@@ -182,8 +226,9 @@ export const myProjects: Project[] = [
   },
   {
     name: "Shopping notes",
+    slug: "shopping-notes",
     description:
-      "Shopping-notes is a simple mobile application that allows users to create their shopping lists. Products in them will be automatically grouped by shops and product category, which will make shopping easier for the user.",
+      "Shopping-notes to prosta aplikacja mobilna pozwalająca użytkownikom tworzyć listy zakupów. Produkty są automatycznie grupowane według sklepów i kategorii, co ułatwia zakupy.",
     createdAt: new Date(),
     type: "Mobile app",
     technologies: [
@@ -199,24 +244,6 @@ export const myProjects: Project[] = [
       linkToGithub: "https://github.com/infinite223/Shopping-notes",
       linkToLiveapp:
         "https://play.google.com/store/apps/details?id=com.shopping.notes",
-    },
-  },
-  {
-    name: "Portfolio",
-    description:
-      "Page about me, containing all my projects, my interests and contacts.",
-    createdAt: new Date(),
-    type: "Mobile app",
-    technologies: [
-      myTechnologies[6],
-      myTechnologies[10],
-      myTechnologies[4],
-      myTechnologies[12],
-    ],
-    image: "portfolio",
-    links: {
-      linkToGithub: "https://github.com/infinite223/Portfolio",
-      linkToLiveapp: "",
     },
   },
 ];
