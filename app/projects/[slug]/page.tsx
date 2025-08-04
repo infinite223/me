@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import { SectionHeader } from "@/app/page";
 import StackCard from "@/components/StackCard";
 import { myProjects } from "@/app/projects/consts";
 import scheduleApp from "../../../assets/scheduleApp.png";

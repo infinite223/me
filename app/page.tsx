@@ -224,7 +224,7 @@ export default function HomePage() {
   );
 }
 
-export const SectionHeader = ({ title }: { title: string }) => {
+const SectionHeader = ({ title }: { title: string }) => {
   return <h2 className="text-3xl font-semibold mt-4">{title}</h2>;
 };
 
