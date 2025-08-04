@@ -71,17 +71,17 @@ export default async function ProjectDetails({ params }: PageProps) {
             </div>
           </div>
         </div>
-
         <Image
           src={image}
           alt={project.name}
           className="rounded-md mb-6 bg-zinc-200/50 w-full mt-5"
         />
+        <h2 className="text-2xl font-semibold mt-4">Opis projektu</h2>
+        <p className="mb-8 mt-4">{project.description}</p>
+        <h2 className="text-2xl font-semibold mt-4">
+          Wykorzystane technologie
+        </h2>
 
-        <SectionHeader title="Opis projektu" />
-        <p className="text-lg mb-8 mt-4">{project.description}</p>
-
-        <SectionHeader title="Wykorzystane technologie" />
         <div className="flex gap-2 flex-wrap mt-4 w-full">
           {project.technologies.map((tech, key) => (
             <StackCard

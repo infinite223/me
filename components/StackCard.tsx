@@ -16,7 +16,7 @@ const StackCard = ({
   color,
 }: StackCardProps) => {
   return (
-    <div className="flex gap-2 flex-col bg-white rounded-md p-5 shadow-sm hover:shadow-md transition-all h-full">
+    <div className="flex gap-2 flex-col bg-white rounded-md p-5 shadow-sm hover:shadow-md transition-all h-full max-md:w-full">
       <div className="flex gap-5 items-center">
         <Icon
           className={`${small ? "w-10 h-10" : "w-10 h-10"} text-blue-500`}

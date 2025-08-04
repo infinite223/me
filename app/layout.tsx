@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className={` font-sans antialiased max-md:overflow-y-auto`}>
-        <div className="flex p-5 pr-0 max-md:mr-5 gap-3 max-md:flex-col">
+        <div className="flex p-5 pr-0 max-md:pr-3 max-md:p-3 gap-3 max-md:flex-col">
           <Sidebar />
           <main className="flex-1 md:overflow-y-auto scroll-smooth px-6 max-md:px-2 py-6">
             {children}
