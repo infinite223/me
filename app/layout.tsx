@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import { Inter } from "next/font/google";
@@ -14,6 +13,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Dawid Szmigiel",
   description: "Dawid Szmigiel IT Solutions",
+  icons: [{
+    url: '/favicon.png',
+    type: 'image/png' 
+  }]
 };
 
 export default function RootLayout({
