@@ -74,25 +74,34 @@ export default function HomePage() {
       </div>
 
       <SectionHeader title="O mnie" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white rounded-md p-6 shadow-sm">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-xl p-8 shadow-md">
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
-            <HiAcademicCap className="mr-2" />
-            Wykształcenie
-          </h3>
-          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5">
-            <li>Magister informatyki - Politechnika Opolska</li>
-            <li>Inżynier informatyki - Politechnika Opolska</li>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-blue-100 p-2 rounded-full">
+              <HiAcademicCap className="text-blue-600 w-6 h-6" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Wykształcenie
+            </h3>
+          </div>
+          <ul className="list-disc list-outside text-gray-700 space-y-2 pl-6">
+            <li>Magister informatyki – Politechnika Opolska</li>
+            <li>Inżynier informatyki – Politechnika Opolska</li>
             <li>Technikum informatyczne</li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
-            <HiBriefcase className="mr-2" />
-            Doświadczenie
-          </h3>
-          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-green-100 p-2 rounded-full">
+              <HiBriefcase className="text-green-600 w-6 h-6" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Doświadczenie
+            </h3>
+          </div>
+          <ul className="list-disc list-outside text-gray-700 space-y-2 pl-6">
             <li>1,5 roku jako Junior developer w Codefusion</li>
             <li>2 miesiące stażu w Codefusion</li>
             <li>1 miesiąc praktyk w Codefusion</li>
@@ -101,11 +110,13 @@ export default function HomePage() {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
-            <HiHeart className="mr-2" />
-            Hobby
-          </h3>
-          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-pink-100 p-2 rounded-full">
+              <HiHeart className="text-pink-600 w-6 h-6" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900">Hobby</h3>
+          </div>
+          <ul className="list-disc list-outside text-gray-700 space-y-2 pl-6">
             <li>Motoryzacja</li>
             <li>Tuning samochodów</li>
             <li>E-Sport</li>
@@ -114,15 +125,16 @@ export default function HomePage() {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
-            <HiBadgeCheck className="mr-2" />
-            Certyfikaty / uprawnienia
-          </h3>
-          <ul className="list-disc list-outside text-gray-700 space-y-1 pl-5 text-pretty">
-            <li>
-              Szkolenie - Programowanie C++ organizowane przez SME training
-              Karwatka
-            </li>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-yellow-100 p-2 rounded-full">
+              <HiBadgeCheck className="text-yellow-600 w-6 h-6" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Certyfikaty / Uprawnienia
+            </h3>
+          </div>
+          <ul className="list-disc list-outside text-gray-700 space-y-2 pl-6">
+            <li>Szkolenie – Programowanie C++ (SME Karwatka)</li>
             <li>AZ-104: Deploy and manage Azure compute resources</li>
             <li>AZ-104: Monitor and back up Azure resources</li>
             <li>Kwalifikacje E12/E13/E14</li>
@@ -220,6 +232,15 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      <footer className="mt-10 border-t border-gray-200 py-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-4">
+          <p className="text-sm text-gray-500">
+            © {new Date().getFullYear()} Dawid Szmigiel IT Solutions - Wszelkie
+            prawa zastrzeżone.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
