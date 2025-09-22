@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import { Inter } from "next/font/google";
+import { PageFooter } from "@/components/PageFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,10 +14,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Dawid Szmigiel",
   description: "Dawid Szmigiel IT Solutions",
-  icons: [{
-    url: '/favicon.png',
-    type: 'image/png' 
-  }]
+  icons: [
+    {
+      url: "/favicon.png",
+      type: "image/png",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -31,6 +34,7 @@ export default function RootLayout({
           <Sidebar />
           <main className="flex-1 md:overflow-y-auto scroll-smooth px-6 max-md:px-2 py-6">
             {children}
+            <PageFooter />
           </main>
         </div>
       </body>

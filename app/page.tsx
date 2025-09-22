@@ -19,6 +19,7 @@ import scheduleApp from "../assets/scheduleApp.png";
 import carsdesignStart from "../assets/carsdesignStart.png";
 import kaban from "../assets/kaban_board_screen.png";
 import monkey from "../assets/monkey.png";
+import { PageFooter } from "@/components/PageFooter";
 
 function getImageByName(name: string) {
   switch (name) {
@@ -232,15 +233,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      <footer className="mt-10 border-t border-gray-200 py-4">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-4">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Dawid Szmigiel IT Solutions - Wszelkie
-            prawa zastrzeżone.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
