@@ -1,6 +1,6 @@
 "use client";
 
-import StackCard from "@/components/StackCard";
+import StackCard from "@/app/components/StackCard";
 import { fullStack } from "./consts";
 
 export default function StackPage() {

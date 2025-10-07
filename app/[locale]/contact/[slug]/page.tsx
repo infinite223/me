@@ -2,8 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import StackCard from "@/components/StackCard";
-import { myProjects } from "@/app/projects/consts";
+import StackCard from "@/app/components/StackCard";
 import scheduleApp from "../../../assets/scheduleApp.png";
 import carsdesignStart from "../../../assets/carsdesignStart.png";
 import kaban from "../../../assets/kaban_board_screen.png";
@@ -11,6 +10,7 @@ import monkey from "../../../assets/monkey.png";
 import workSchedule from "../../../assets/workSchedule.png";
 import downloadSongs from "../../../assets/downloadSongs.png";
 import shoppingNotes from "../../../assets/shoppingNotes.png";
+import { myProjects } from "../consts";
 
 type PageProps = {
   params: Promise<{
