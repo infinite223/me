@@ -49,5 +49,35 @@
   "sectionFooter": {
     "projects": "Zobacz wszystkie moje projekty",
     "stack": "Zobacz pełny mój stack"
+  },
+  "stackPage": {
+    "title": "Stack",
+    "descriptions": {
+      "React": "Biblioteka do tworzenia interfejsów użytkownika oparta na komponentach.",
+      "React Native": "Framework do tworzenia natywnych aplikacji mobilnych z użyciem React.",
+      "TypeScript": "Typowany nadzbiór JavaScriptu zapewniający większą niezawodność kodu.",
+      "JavaScript": "Język programowania wykorzystywany do tworzenia dynamicznych aplikacji webowych.",
+      "DotNET": "Nowoczesna platforma Microsoftu do budowy aplikacji webowych i API.",
+      "Angular": "Framework do budowy aplikacji webowych oparty na TypeScript.",
+      "Expo": "Narzędzie ułatwiające tworzenie aplikacji mobilnych w React Native.",
+      "Nextjs": "Framework do Reacta oferujący SSR i generowanie stron statycznych.",
+      "Tailwind CSS": "CSS framework oparty na klasach narzędziowych.",
+      "CSS": "Język stylów używany do opisu wyglądu dokumentów HTML.",
+      "SCSS": "Rozszerzenie CSS z zaawansowanymi funkcjami jak zmienne czy zagnieżdżenia.",
+      "Vue": "Progresywny framework JavaScript do budowy interfejsów.",
+      "Redux": "Biblioteka do zarządzania stanem aplikacji w React.",
+      "Firebase": "BaaS od Google – baza danych, hosting i wiele więcej.",
+      "Postman": "Narzędzie do testowania API i integracji backendowych.",
+      "Docker": "Platforma do tworzenia i uruchamiania aplikacji w kontenerach.",
+      "JetBrains Rider": "IDE do .NET, łączące wydajność z funkcjami JetBrains.",
+      "MySQL": "Popularny system zarządzania relacyjną bazą danych.",
+      "SQLite": "Lekka, plikowa baza danych idealna do aplikacji lokalnych i mobilnych.",
+      "PostgreSQL": "Zaawansowana, otwartoźródłowa relacyjna baza danych.",
+      "Git": "System kontroli wersji do zarządzania kodem źródłowym.",
+      "GitHub": "Hosting repozytoriów Git w chmurze.",
+      "GitLab": "Platforma DevOps i hosting Git z własnym CI/CD.",
+      "Gitea": "Lekkie rozwiązanie do hostowania repozytoriów Git.",
+      "Jira": "Narzędzie do zarządzania projektami i śledzenia zadań."
+    }
   }
 }

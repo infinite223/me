@@ -49,5 +49,35 @@
   "sectionFooter": {
     "projects": "See all my projects",
     "stack": "View my full tech stack"
+  },
+  "stackPage": {
+    "title": "Stack",
+    "descriptions": {
+      "React": "A library for building user interfaces based on components.",
+      "React Native": "A framework for creating native mobile apps using React.",
+      "TypeScript": "A typed superset of JavaScript providing better code reliability.",
+      "JavaScript": "A programming language used to build dynamic web applications.",
+      "DotNET": "Microsoft's modern platform for building web apps and APIs.",
+      "Angular": "A framework for building web applications using TypeScript.",
+      "Expo": "A tool that simplifies mobile app development with React Native.",
+      "Nextjs": "A React framework offering SSR and static site generation.",
+      "Tailwind CSS": "A utility-first CSS framework for rapidly building UI.",
+      "CSS": "A stylesheet language used to describe the presentation of HTML documents.",
+      "SCSS": "An extension of CSS with advanced features like variables and nesting.",
+      "Vue": "A progressive JavaScript framework for building interfaces.",
+      "Redux": "A library for managing application state in React.",
+      "Firebase": "A Google BaaS offering database, hosting, and more.",
+      "Postman": "A tool for testing APIs and backend integrations.",
+      "Docker": "A platform for developing and running applications in containers.",
+      "JetBrains Rider": "A .NET IDE combining performance with JetBrains features.",
+      "MySQL": "A popular relational database management system.",
+      "SQLite": "A lightweight, file-based database ideal for local and mobile apps.",
+      "PostgreSQL": "An advanced, open-source relational database system.",
+      "Git": "A version control system for managing source code.",
+      "GitHub": "Cloud-based hosting for Git repositories.",
+      "GitLab": "A DevOps platform and Git hosting with built-in CI/CD.",
+      "Gitea": "A lightweight self-hosted Git service.",
+      "Jira": "A project management and issue tracking tool."
+    }
   }
 }
