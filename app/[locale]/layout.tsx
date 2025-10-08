@@ -9,7 +9,7 @@ export default async function LocaleLayout({
   return (
     <div className="flex p-5 gap-3 max-md:flex-col">
       <Sidebar />
-      <main className="flex-1 px-6 py-6">
+      <main className="flex-1">
         {children}
         <PageFooter />
       </main>
