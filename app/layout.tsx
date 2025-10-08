@@ -19,11 +19,16 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
   const messages = await getMessages();
+  const { locale } = await params;
 
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang={locale} className={inter.variable}>
       <body className="font-sans antialiased max-md:overflow-y-auto">
         <NextIntlClientProvider messages={messages}>
           {children}

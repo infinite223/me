@@ -1,3 +1,53 @@
 {
-  "welcome": "Witaj na stronie głównej!"
+  "main": {
+    "title": "Hej 👋, nazywam się Dawid Szmigiel!",
+    "description": "Tworzę nowoczesne i dopracowane rozwiązania cyfrowe od aplikacji webowych i mobilnych po estetyczne strony internetowe. Łączę wiedzę techniczną z podejściem zorientowanym na użytkownika, tworząc produkty, które nie tylko dobrze wyglądają, ale wspierają cele biznesowe i rozwijają się wraz z Twoją firmą."
+  },
+  "sections": {
+    "about": "O mnie",
+    "education": "Wykształcenie",
+    "experience": "Doświadczenie",
+    "hobby": "Hobby",
+    "certificates": "Certyfikaty / Uprawnienia",
+    "projects": "Własne projekty",
+    "stack": "Stack",
+    "contact": "Kontakt"
+  },
+  "education": {
+    "1": "Magister informatyki – Politechnika Opolska",
+    "2": "Inżynier informatyki – Politechnika Opolska",
+    "3": "Technikum informatyczne"
+  },
+  "experience": {
+    "1": "1,5 roku jako Junior developer w Codefusion",
+    "2": "2 miesiące stażu w Codefusion",
+    "3": "1 miesiąc praktyk w Codefusion",
+    "4": "4 lata tworzenia własnych projektów"
+  },
+  "hobby": {
+    "1": "Motoryzacja",
+    "2": "Tuning samochodów",
+    "3": "E-Sport",
+    "4": "Fotografia"
+  },
+  "certificates": {
+    "1": "Szkolenie – Programowanie C++ (SME Karwatka)",
+    "2": "AZ-104: Deploy and manage Azure compute resources",
+    "3": "AZ-104: Monitor and back up Azure resources",
+    "4": "Kwalifikacje E12/E13/E14"
+  },
+  "contactText": "Masz pomysł na projekt, szukasz osoby do współpracy albo chcesz poznać moje aplikacje? 🚀 Napisz do mnie lub sprawdź moje profile poniżej.",
+  "contactTextBottom": "Zawsze jestem otwarty na nowe pomysły i ciekawe współprace. Jeśli masz pytania lub chcesz porozmawiać o potencjalnym projekcie — śmiało, skontaktuj się ze mną. 🤝",
+  "contactEmail": "szmigielitsolutions@gmail.com",
+  "contactLinkedin": "linkedin.com/in/dawid-szmigiel-7a7609167",
+  "footer": {
+    "company": "Dawid Szmigiel IT Solutions",
+    "nip": "NIP: 5761599645",
+    "regon": "REGON: 542171897",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "sectionFooter": {
+    "projects": "Zobacz wszystkie moje projekty",
+    "stack": "Zobacz pełny mój stack"
+  }
 }

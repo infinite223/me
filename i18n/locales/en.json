@@ -1,3 +1,53 @@
 {
-  "welcome": "Welcome to the homepage!"
+  "main": {
+    "title": "Hey 👋, my name is Dawid Szmigiel!",
+    "description": "I create modern and refined digital solutions, from web and mobile applications to elegant websites. I combine technical expertise with a user-centered approach to build products that not only look great but also support business goals and grow alongside your company."
+  },
+  "sections": {
+    "about": "About me",
+    "education": "Education",
+    "experience": "Experience",
+    "hobby": "Hobbies",
+    "certificates": "Certificates / Qualifications",
+    "projects": "Own projects",
+    "stack": "Tech stack",
+    "contact": "Contact"
+  },
+  "education": {
+    "1": "Master of Computer Science – Opole University of Technology",
+    "2": "Bachelor of Computer Science – Opole University of Technology",
+    "3": "IT Technical High School"
+  },
+  "experience": {
+    "1": "1.5 years as a Junior Developer at Codefusion",
+    "2": "2-month internship at Codefusion",
+    "3": "1-month practice at Codefusion",
+    "4": "4 years of creating personal projects"
+  },
+  "hobby": {
+    "1": "Automotive",
+    "2": "Car tuning",
+    "3": "E-Sports",
+    "4": "Photography"
+  },
+  "certificates": {
+    "1": "Training – C++ Programming (SME Karwatka)",
+    "2": "AZ-104: Deploy and manage Azure compute resources",
+    "3": "AZ-104: Monitor and back up Azure resources",
+    "4": "Qualifications E12/E13/E14"
+  },
+  "contactText": "Do you have a project idea, are looking for a collaborator, or want to explore my apps? 🚀 Get in touch or check out my profiles below.",
+  "contactTextBottom": "I'm always open to new ideas and exciting collaborations. If you have questions or want to discuss a potential project — feel free to reach out. 🤝",
+  "contactEmail": "szmigielitsolutions@gmail.com",
+  "contactLinkedin": "linkedin.com/in/dawid-szmigiel-7a7609167",
+  "footer": {
+    "company": "Dawid Szmigiel IT Solutions",
+    "nip": "NIP: 5761599645",
+    "regon": "REGON: 542171897",
+    "rights": "All rights reserved."
+  },
+  "sectionFooter": {
+    "projects": "See all my projects",
+    "stack": "View my full tech stack"
+  }
 }

@@ -10,6 +10,7 @@ import downloadSongs from "../../assets/downloadSongs.png";
 import shoppingNotes from "../../assets/shoppingNotes.png";
 import { myProjects } from "./consts";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 function getImageByName(name: string) {
   switch (name) {
@@ -33,10 +34,12 @@ function getImageByName(name: string) {
 }
 
 export default function ProjectsPage() {
+  const t = useTranslations();
+
   return (
     <div className="flex flex-col gap-6 md:px-6">
       <div>
-        <h1 className="text-3xl font-semibold">Moje projekty </h1>
+        <h1 className="text-3xl font-semibold">{t("sections.projects")}</h1>
 
         <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4 bg-white rounded-md p-6 shadow-sm max-md:p-3">
           {myProjects.map((p, i) => (
