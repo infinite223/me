@@ -137,13 +137,15 @@ export default function HomePage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-md p-6 shadow-sm max-md:p-3">
         {bestProjects.map((p, i) => (
           <Link key={i} href={`/projects/${p.slug}`}>
-            <div className="relative group rounded-md overflow-hidden hover:cursor-pointer bg-zinc-100/90">
+            <div className="relative group rounded-md overflow-hidden hover:cursor-pointer bg-zinc-100/90 aspect-square">
               <Image
                 alt={p.name}
                 src={getImageByName(p.image)}
-                className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-85"
+                fill
+                className="object-cover transition duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-85"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-opacity-0 group-hover:bg-opacity-30 transition duration-300">
+
+              <div className="absolute inset-0 flex items-center justify-center bg-opacity-0 group-hover:bg-black/40 transition duration-300">
                 <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-2xl transition duration-300">
                   {p.name}
                 </span>
