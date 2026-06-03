@@ -8,12 +8,18 @@ import monkey from "../../assets/monkey.png";
 import workSchedule from "../../assets/workSchedule.png";
 import downloadSongs from "../../assets/downloadSongs.png";
 import shoppingNotes from "../../assets/shoppingNotes.png";
+import assetsTrackPlaceholder from "../../assets/assets-track.png";
+import automotivePlacePlaceholder from "../../assets/automotiveplace.png";
 import { myProjects } from "./consts";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 function getImageByName(name: string) {
   switch (name) {
+    case "assetsTrack":
+      return assetsTrackPlaceholder;
+    case "automotivePlace":
+      return automotivePlacePlaceholder;
     case "carsdesignStart":
       return carsdesignStart;
     case "scheduleApp":

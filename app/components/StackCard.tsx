@@ -15,17 +15,34 @@ const StackCard = ({
   small,
   color,
 }: StackCardProps) => {
-  return (
-    <div className="flex gap-2 flex-col bg-white rounded-md p-5 shadow-sm hover:shadow-md transition-all h-full max-md:w-full">
-      <div className="flex gap-5 items-center">
-        <Icon
-          className={`${small ? "w-10 h-10" : "w-10 h-10"} text-blue-500`}
-          style={{ color }}
-        />
-        <h4 className="text-base font-semibold">{title}</h4>
+  if (small) {
+    return (
+      <div className="flex items-center gap-2.5 bg-white rounded-lg px-3 py-2 shadow-sm hover:shadow-md transition-all border border-zinc-100">
+        <div
+          className="flex items-center justify-center w-7 h-7 rounded-md flex-shrink-0"
+          style={{ backgroundColor: `${color}18` }}
+        >
+          <Icon className="w-4 h-4" style={{ color }} />
+        </div>
+        <span className="text-sm font-medium text-gray-800 whitespace-nowrap">
+          {title}
+        </span>
       </div>
+    );
+  }
 
-      {!small && <p className="text-sm text-gray-600 mt-2">{description}</p>}
+  return (
+    <div className="flex gap-3 flex-col bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all h-full border border-zinc-100">
+      <div className="flex gap-3 items-center">
+        <div
+          className="flex items-center justify-center w-10 h-10 rounded-lg flex-shrink-0"
+          style={{ backgroundColor: `${color}18` }}
+        >
+          <Icon className="w-5 h-5" style={{ color }} />
+        </div>
+        <h4 className="text-sm font-semibold text-gray-900">{title}</h4>
+      </div>
+      <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
     </div>
   );
 };

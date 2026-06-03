@@ -20,10 +20,16 @@ import scheduleApp from "../assets/scheduleApp.png";
 import carsdesignStart from "../assets/carsdesignStart.png";
 import kaban from "../assets/kaban_board_screen.png";
 import monkey from "../assets/monkey.png";
+import assetsTrackPlaceholder from "../assets/assets-track.png";
+import automotivePlacePlaceholder from "../assets/automotiveplace.png";
 import { useTranslations } from "next-intl";
 
 function getImageByName(name: string) {
   switch (name) {
+    case "assetsTrack":
+      return assetsTrackPlaceholder;
+    case "automotivePlace":
+      return automotivePlacePlaceholder;
     case "carsdesignStart":
       return carsdesignStart;
     case "scheduleApp":

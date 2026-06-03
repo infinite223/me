@@ -45,11 +45,15 @@ export type Project = {
     | "monkey"
     | "workSchedule"
     | "downloadSongs"
-    | "shoppingNotes";
+    | "shoppingNotes"
+    | "assetsTrack"
+    | "automotivePlace";
   type: "Mobile app" | "Web app" | "all";
   links: {
     linkToGithub: string;
     linkToLiveapp?: string;
+    linkToMobileApp?: string;
+    linkToDesktopApp?: string;
   };
 };
 
@@ -96,6 +100,42 @@ export const latestProject = {
   },
 };
 export const myProjects: Project[] = [
+  {
+    name: "Assets Track",
+    slug: "assets-track",
+    description:
+      "Aplikacja do analizy portfela inwestycyjnego dla użytkowników XTB. Dostępna w wersji web, desktopowej (Tauri) i mobilnej. Użytkownik wgrywa eksport Excela z XTB - aplikacja parsuje go i zapisuje snapshot miesiąca. Dane trzymane lokalnie (localStorage / SQLite), zero backendu.",
+    createdAt: new Date(),
+    type: "all",
+    technologies: [myTechnologies[0], myTechnologies[10], myTechnologies[13]],
+    image: "assetsTrack",
+    links: {
+      linkToGithub: "https://github.com/infinite223/Assets-Track",
+      linkToLiveapp: "https://assets-track.vercel.app",
+      linkToMobileApp:
+        "https://play.google.com/store/apps/details?id=com.infinite223.assetstrack&hl=pl",
+    },
+  },
+  {
+    name: "Automotive Place",
+    slug: "automotive-place",
+    description:
+      "Motoryzacyjna platforma społecznościowa dla pasjonatów tuningu i kultury samochodowej. Użytkownicy tworzą projekty swoich pojazdów (etapy modyfikacji, historia serwisowa, zdjęcia), publikują posty, organizują tripy i zaznaczają spoty na mapie.",
+    createdAt: new Date(),
+    type: "Web app",
+    technologies: [
+      myTechnologies[0],
+      myTechnologies[10],
+      myTechnologies[13],
+      myTechnologies[3],
+      myTechnologies[5],
+    ],
+    image: "automotivePlace",
+    links: {
+      linkToGithub: "https://github.com/infinite223/automotiveplace",
+      linkToLiveapp: "https://automotiveplace-dev.vercel.app/pl/sign-in",
+    },
+  },
   {
     name: "Cars design",
     slug: "cars-design",
@@ -249,8 +289,8 @@ export const myProjects: Project[] = [
 ];
 
 export const bestProjects: Project[] = [
-  myProjects[1],
   myProjects[0],
-  myProjects[2],
+  myProjects[1],
   myProjects[3],
+  myProjects[2],
 ];

@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight, Globe } from "lucide-react";
+import { FaGithub, FaGooglePlay } from "react-icons/fa";
 import StackCard from "@/app/components/StackCard";
 import scheduleApp from "../../../assets/scheduleApp.png";
 import carsdesignStart from "../../../assets/carsdesignStart.png";
@@ -10,6 +11,8 @@ import monkey from "../../../assets/monkey.png";
 import workSchedule from "../../../assets/workSchedule.png";
 import downloadSongs from "../../../assets/downloadSongs.png";
 import shoppingNotes from "../../../assets/shoppingNotes.png";
+import assetsTrackPlaceholder from "../../../assets/assets-track.png";
+import automotivePlacePlaceholder from "../../../assets/automotiveplace.png";
 import { myProjects } from "../consts";
 
 type PageProps = {
@@ -20,6 +23,10 @@ type PageProps = {
 
 function getImageByName(name: string) {
   switch (name) {
+    case "assetsTrack":
+      return assetsTrackPlaceholder;
+    case "automotivePlace":
+      return automotivePlacePlaceholder;
     case "carsdesignStart":
       return carsdesignStart;
     case "scheduleApp":
@@ -38,6 +45,29 @@ function getImageByName(name: string) {
       return scheduleApp;
   }
 }
+
+const ProjectLink = ({
+  href,
+  icon,
+  label,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center justify-between hover:text-black hover:bg-zinc-100/60 p-3 rounded-md transition-colors text-gray-700 text-sm"
+  >
+    <span className="flex items-center gap-4">
+      {icon}
+      {label}
+    </span>
+    <ChevronRight className="w-4 h-4 opacity-0 translate-x-[-4px] transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 text-gray-500" />
+  </a>
+);
 
 export default async function ProjectDetails({ params }: PageProps) {
   const param = await params;
@@ -92,6 +122,29 @@ export default async function ProjectDetails({ params }: PageProps) {
               small
             />
           ))}
+        </div>
+
+        <h2 className="text-2xl font-semibold mt-6">Linki</h2>
+        <div className="flex flex-col mt-2">
+          <ProjectLink
+            href={project.links.linkToGithub}
+            icon={<FaGithub className="w-5 h-5" />}
+            label="GitHub"
+          />
+          {project.links.linkToLiveapp && (
+            <ProjectLink
+              href={project.links.linkToLiveapp}
+              icon={<Globe className="w-5 h-5" />}
+              label="Web"
+            />
+          )}
+          {project.links.linkToMobileApp && (
+            <ProjectLink
+              href={project.links.linkToMobileApp}
+              icon={<FaGooglePlay className="w-5 h-5" />}
+              label="Google Play"
+            />
+          )}
         </div>
       </div>
     </div>

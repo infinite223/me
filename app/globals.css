@@ -8,6 +8,17 @@ body {
   background: var(--background);
   margin: 0px;
   padding: 0px;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1a1a2e;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
 ::-webkit-scrollbar {
