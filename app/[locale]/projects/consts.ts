@@ -47,10 +47,11 @@ export type Project = {
     | "downloadSongs"
     | "shoppingNotes"
     | "assetsTrack"
-    | "automotivePlace";
+    | "automotivePlace"
+    | "shiftmaze";
   type: "Mobile app" | "Web app" | "all";
   links: {
-    linkToGithub: string;
+    linkToGithub?: string;
     linkToLiveapp?: string;
     linkToMobileApp?: string;
     linkToDesktopApp?: string;
@@ -182,6 +183,27 @@ export const myProjects: Project[] = [
     links: {
       linkToGithub: "https://github.com/infinite223/Schedule-work-app",
       linkToLiveapp: "https://schedulework-preview.netlify.app/",
+    },
+  },
+  {
+    name: "ShiftMaze",
+    slug: "shiftmaze",
+    description:
+      "ShiftMaze to dynamiczna gra zręcznościowo-logiczna, w której Twoim celem jest dotarcie do zmieniającego się celu w labiryncie zanim upłynie czas. Z każdym poziomem labirynt staje się większy i trudniejszy, a Ty musisz wykazać się refleksem i precyzją. Prosta obsługa joystickiem i rosnący poziom trudności zapewnią Ci godziny wciągającej zabawy!",
+    createdAt: new Date(),
+    type: "Mobile app",
+    technologies: [
+      myTechnologies[0],
+      myTechnologies[1],
+      myTechnologies[2],
+      myTechnologies[9],
+      myTechnologies[10],
+      myTechnologies[12],
+    ],
+    image: "shiftmaze",
+    links: {
+      linkToMobileApp:
+        "https://play.google.com/store/apps/details?id=com.infinite223.ShiftMaze",
     },
   },
   {

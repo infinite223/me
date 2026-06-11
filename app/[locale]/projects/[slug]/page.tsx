@@ -13,6 +13,7 @@ import downloadSongs from "../../../assets/downloadSongs.png";
 import shoppingNotes from "../../../assets/shoppingNotes.png";
 import assetsTrackPlaceholder from "../../../assets/assets-track.png";
 import automotivePlacePlaceholder from "../../../assets/automotiveplace.png";
+import shiftmazeFull from "../../../assets/shiftmazeFull.png";
 import { myProjects } from "../consts";
 
 type PageProps = {
@@ -27,6 +28,8 @@ function getImageByName(name: string) {
       return assetsTrackPlaceholder;
     case "automotivePlace":
       return automotivePlacePlaceholder;
+    case "shiftmaze":
+      return shiftmazeFull;
     case "carsdesignStart":
       return carsdesignStart;
     case "scheduleApp":
@@ -126,11 +129,13 @@ export default async function ProjectDetails({ params }: PageProps) {
 
         <h2 className="text-2xl font-semibold mt-6">Linki</h2>
         <div className="flex flex-col mt-2">
-          <ProjectLink
-            href={project.links.linkToGithub}
-            icon={<FaGithub className="w-5 h-5" />}
-            label="GitHub"
-          />
+          {project.links.linkToGithub && (
+            <ProjectLink
+              href={project.links.linkToGithub}
+              icon={<FaGithub className="w-5 h-5" />}
+              label="GitHub"
+            />
+          )}
           {project.links.linkToLiveapp && (
             <ProjectLink
               href={project.links.linkToLiveapp}

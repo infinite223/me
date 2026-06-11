@@ -22,6 +22,7 @@ import kaban from "../assets/kaban_board_screen.png";
 import monkey from "../assets/monkey.png";
 import assetsTrackPlaceholder from "../assets/assets-track.png";
 import automotivePlacePlaceholder from "../assets/automotiveplace.png";
+import shiftmazeFull from "../assets/shiftmazeFull.png";
 import { useTranslations } from "next-intl";
 
 function getImageByName(name: string) {
@@ -30,6 +31,8 @@ function getImageByName(name: string) {
       return assetsTrackPlaceholder;
     case "automotivePlace":
       return automotivePlacePlaceholder;
+    case "shiftmaze":
+      return shiftmazeFull;
     case "carsdesignStart":
       return carsdesignStart;
     case "scheduleApp":
