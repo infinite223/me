@@ -134,7 +134,7 @@ export const myProjects: Project[] = [
     image: "automotivePlace",
     links: {
       linkToGithub: "https://github.com/infinite223/automotiveplace",
-      linkToLiveapp: "https://automotiveplace-dev.vercel.app/pl/sign-in",
+      linkToLiveapp: "https://automotiveplace.pl",
     },
   },
   {
