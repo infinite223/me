@@ -143,6 +143,20 @@ export default function HomePage() {
         </div>
       </div>
       <SectionHeader title={t("sections.projects")} />
+      <p className="text-gray-700 bg-white rounded-md p-4 shadow-sm">
+        {t.rich("latestProject.text", {
+          link: (chunks) => (
+            <a
+              href="https://automotiveplace.pl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-cyan-600 hover:underline"
+            >
+              {chunks}
+            </a>
+          ),
+        })}
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-md p-6 shadow-sm max-md:p-3">
         {bestProjects.map((p, i) => (
           <Link key={i} href={`/projects/${p.slug}`}>

@@ -102,22 +102,6 @@ export const latestProject = {
 };
 export const myProjects: Project[] = [
   {
-    name: "Assets Track",
-    slug: "assets-track",
-    description:
-      "Aplikacja do analizy portfela inwestycyjnego dla użytkowników XTB. Dostępna w wersji web, desktopowej (Tauri) i mobilnej. Użytkownik wgrywa eksport Excela z XTB - aplikacja parsuje go i zapisuje snapshot miesiąca. Dane trzymane lokalnie (localStorage / SQLite), zero backendu.",
-    createdAt: new Date(),
-    type: "all",
-    technologies: [myTechnologies[0], myTechnologies[10], myTechnologies[13]],
-    image: "assetsTrack",
-    links: {
-      linkToGithub: "https://github.com/infinite223/Assets-Track",
-      linkToLiveapp: "https://assets-track.vercel.app",
-      linkToMobileApp:
-        "https://play.google.com/store/apps/details?id=com.infinite223.assetstrack&hl=pl",
-    },
-  },
-  {
     name: "Automotive Place",
     slug: "automotive-place",
     description:
@@ -133,32 +117,23 @@ export const myProjects: Project[] = [
     ],
     image: "automotivePlace",
     links: {
-      linkToGithub: "https://github.com/infinite223/automotiveplace",
       linkToLiveapp: "https://automotiveplace.pl",
     },
   },
   {
-    name: "Cars design",
-    slug: "cars-design",
+    name: "Assets Track",
+    slug: "assets-track",
     description:
-      "Cars design to aplikacja webowa i mobilna stworzona z myślą o społeczności motoryzacyjnej. Użytkownicy mogą dzielić się projektami swoich samochodów, dodawać potrzebne parametry, zdjęcia, komponenty i wiele więcej. Aplikacja pozwala również tworzyć spoty i rozmawiać z innymi.",
+      "Aplikacja do analizy portfela inwestycyjnego dla użytkowników XTB. Dostępna w wersji web, desktopowej (Tauri) i mobilnej. Użytkownik wgrywa eksport Excela z XTB - aplikacja parsuje go i zapisuje snapshot miesiąca. Dane trzymane lokalnie (localStorage / SQLite), zero backendu.",
     createdAt: new Date(),
     type: "all",
-    technologies: [
-      myTechnologies[0],
-      myTechnologies[1],
-      myTechnologies[2],
-      myTechnologies[3],
-      myTechnologies[4],
-      myTechnologies[5],
-      myTechnologies[7],
-      myTechnologies[10],
-      myTechnologies[12],
-    ],
-    image: "carsdesignStart",
+    technologies: [myTechnologies[0], myTechnologies[10], myTechnologies[13]],
+    image: "assetsTrack",
     links: {
-      linkToGithub: "https://github.com/infinite223/Cars-designs-web",
-      linkToLiveapp: "https://carsdesigns.netlify.app/",
+      linkToGithub: "https://github.com/infinite223/Assets-Track",
+      linkToLiveapp: "https://assets-track.vercel.app",
+      linkToMobileApp:
+        "https://play.google.com/store/apps/details?id=com.infinite223.assetstrack&hl=pl",
     },
   },
   {
@@ -204,6 +179,30 @@ export const myProjects: Project[] = [
     links: {
       linkToMobileApp:
         "https://play.google.com/store/apps/details?id=com.infinite223.ShiftMaze",
+    },
+  },
+  {
+    name: "Cars design",
+    slug: "cars-design",
+    description:
+      "Cars design to aplikacja webowa i mobilna stworzona z myślą o społeczności motoryzacyjnej. Użytkownicy mogą dzielić się projektami swoich samochodów, dodawać potrzebne parametry, zdjęcia, komponenty i wiele więcej. Aplikacja pozwala również tworzyć spoty i rozmawiać z innymi.",
+    createdAt: new Date(),
+    type: "all",
+    technologies: [
+      myTechnologies[0],
+      myTechnologies[1],
+      myTechnologies[2],
+      myTechnologies[3],
+      myTechnologies[4],
+      myTechnologies[5],
+      myTechnologies[7],
+      myTechnologies[10],
+      myTechnologies[12],
+    ],
+    image: "carsdesignStart",
+    links: {
+      linkToGithub: "https://github.com/infinite223/Cars-designs-web",
+      linkToLiveapp: "https://carsdesigns.netlify.app/",
     },
   },
   {

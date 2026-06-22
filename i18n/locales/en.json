@@ -50,6 +50,9 @@
     "projects": "See all my projects",
     "stack": "View my full tech stack"
   },
+  "latestProject": {
+    "text": "My latest project is <link>Automotive Place</link>, a large and growing social platform for automotive enthusiasts, where anyone can keep a history of their car, document modifications and service, and connect with the local community. It's a project where I combine professional engineering experience with my personal passion for cars, building something with real long-term growth potential."
+  },
   "stackPage": {
     "title": "Stack",
     "descriptions": {

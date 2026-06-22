@@ -50,6 +50,9 @@
     "projects": "Zobacz wszystkie moje projekty",
     "stack": "Zobacz pełny mój stack"
   },
+  "latestProject": {
+    "text": "Mój najnowszy projekt to <link>Automotive Place</link>, duża i rozwojowa platforma społecznościowa dla pasjonatów motoryzacji, w której każdy może prowadzić historię swojego auta, dokumentować modyfikacje i serwis oraz łączyć się z lokalną społecznością. To projekt, w którym łączę zawodowe doświadczenie inżynierskie z prywatną pasją do motoryzacji, budując coś z realnym potencjałem rozwoju na lata."
+  },
   "stackPage": {
     "title": "Stack",
     "descriptions": {
