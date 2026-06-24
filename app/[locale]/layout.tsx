@@ -1,6 +1,10 @@
 import Sidebar from "@/app/components/Sidebar";
 import { PageFooter } from "@/app/components/PageFooter";
 
+export function generateStaticParams() {
+  return [{ locale: "pl" }, { locale: "en" }];
+}
+
 export default async function LocaleLayout({
   children,
 }: {
