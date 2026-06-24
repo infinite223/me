@@ -48,7 +48,9 @@ export type Project = {
     | "shoppingNotes"
     | "assetsTrack"
     | "automotivePlace"
-    | "shiftmaze";
+    | "shiftmaze"
+    | "pizza-app";
+
   type: "Mobile app" | "Web app" | "all";
   links: {
     linkToGithub?: string;
@@ -182,6 +184,44 @@ export const myProjects: Project[] = [
     },
   },
   {
+    name: "Rosso Pizzeria",
+    slug: "rosso-pizzeria",
+    description:
+      "Nowoczesna aplikacja mobilna (UI/UX) dla rzemieślniczej pizzerii. Oferuje przejrzysty podział na kategorie dań, zaawansowany konfigurator pizzy (wybór rozmiaru, ciasta oraz dodatkowych składników z dynamicznym podliczaniem ceny) oraz uproszczony, intuicyjny proces finalizacji zamówienia w koszyku.",
+    createdAt: new Date(),
+    type: "Mobile app",
+    technologies: [
+      myTechnologies[1], // React Native
+      myTechnologies[2], // Expo
+      myTechnologies[10], // TypeScript
+      myTechnologies[13], // Tailwind
+    ],
+    image: "pizza-app",
+    links: {},
+  },
+
+  {
+    name: "Kaban",
+    slug: "kaban",
+    description:
+      "Kaban to aplikacja zaprojektowana z myślą o funkcjonalnościach tablicy kanban. Cała tablica dla danego projektu jest dynamicznie aktualizowana, dzięki czemu użytkownicy nie muszą odświeżać aplikacji.",
+    createdAt: new Date(),
+    type: "Mobile app",
+    technologies: [
+      myTechnologies[0],
+      myTechnologies[1],
+      myTechnologies[2],
+      myTechnologies[3],
+      myTechnologies[5],
+      myTechnologies[10],
+      myTechnologies[12],
+    ],
+    image: "kaban",
+    links: {
+      linkToGithub: "https://github.com/infinite223/kaban",
+    },
+  },
+  {
     name: "Cars design",
     slug: "cars-design",
     description:
@@ -205,108 +245,87 @@ export const myProjects: Project[] = [
       linkToLiveapp: "https://carsdesigns.netlify.app/",
     },
   },
-  {
-    name: "Kaban",
-    slug: "kaban",
-    description:
-      "Kaban to aplikacja zaprojektowana z myślą o funkcjonalnościach tablicy kanban. Cała tablica dla danego projektu jest dynamicznie aktualizowana, dzięki czemu użytkownicy nie muszą odświeżać aplikacji.",
-    createdAt: new Date(),
-    type: "Mobile app",
-    technologies: [
-      myTechnologies[0],
-      myTechnologies[1],
-      myTechnologies[2],
-      myTechnologies[3],
-      myTechnologies[5],
-      myTechnologies[10],
-      myTechnologies[12],
-    ],
-    image: "kaban",
-    links: {
-      linkToGithub: "https://github.com/infinite223/kaban",
-    },
-  },
-  {
-    name: "J-Monkey",
-    slug: "j-monkey",
-    description:
-      "J-monkey to prosta gra mobilna inspirowana popularną grą Flappy Bird.",
-    createdAt: new Date(),
-    type: "Mobile app",
-    technologies: [
-      myTechnologies[0],
-      myTechnologies[1],
-      myTechnologies[2],
-      myTechnologies[5],
-      myTechnologies[9],
-      myTechnologies[12],
-    ],
-    image: "monkey",
-    links: {
-      linkToGithub: "https://github.com/infinite223/J-monkey",
-      linkToLiveapp:
-        "https://play.google.com/store/apps/details?id=com.infinite223.Flappymonkey",
-    },
-  },
-  {
-    name: "Work schedule (v2)",
-    slug: "work-schedule-v2",
-    description:
-      "Work schedule to aplikacja webowa, która umożliwia tworzenie grafiku pracy, zapraszanie pracowników i pozwala im zapisywać się na dyżury w wybrane dni i godziny.",
-    createdAt: new Date(),
-    type: "Web app",
-    technologies: [
-      myTechnologies[0],
-      myTechnologies[3],
-      myTechnologies[4],
-      myTechnologies[5],
-      myTechnologies[7],
-      myTechnologies[10],
-      myTechnologies[12],
-    ],
-    image: "workSchedule",
-    links: {
-      linkToGithub: "https://github.com/infinite223/J-monkey",
-      linkToLiveapp:
-        "https://play.google.com/store/apps/details?id=com.infinite223.Flappymonkey",
-    },
-  },
-  {
-    name: "Download songs",
-    slug: "download-songs",
-    description:
-      "Prosta aplikacja do wyszukiwania piosenek na YouTube i ich pobierania.",
-    createdAt: new Date(),
-    type: "Web app",
-    technologies: [myTechnologies[0], myTechnologies[11], myTechnologies[12]],
-    image: "downloadSongs",
-    links: {
-      linkToGithub: "https://github.com/infinite223/download-songs",
-      linkToLiveapp: "https://download-songs.netlify.app/",
-    },
-  },
-  {
-    name: "Shopping notes",
-    slug: "shopping-notes",
-    description:
-      "Shopping-notes to prosta aplikacja mobilna pozwalająca użytkownikom tworzyć listy zakupów. Produkty są automatycznie grupowane według sklepów i kategorii, co ułatwia zakupy.",
-    createdAt: new Date(),
-    type: "Mobile app",
-    technologies: [
-      myTechnologies[0],
-      myTechnologies[1],
-      myTechnologies[2],
-      myTechnologies[10],
-      myTechnologies[12],
-      myTechnologies[13],
-    ],
-    image: "shoppingNotes",
-    links: {
-      linkToGithub: "https://github.com/infinite223/Shopping-notes",
-      linkToLiveapp:
-        "https://play.google.com/store/apps/details?id=com.shopping.notes",
-    },
-  },
+  // {
+  //   name: "J-Monkey",
+  //   slug: "j-monkey",
+  //   description:
+  //     "J-monkey to prosta gra mobilna inspirowana popularną grą Flappy Bird.",
+  //   createdAt: new Date(),
+  //   type: "Mobile app",
+  //   technologies: [
+  //     myTechnologies[0],
+  //     myTechnologies[1],
+  //     myTechnologies[2],
+  //     myTechnologies[5],
+  //     myTechnologies[9],
+  //     myTechnologies[12],
+  //   ],
+  //   image: "monkey",
+  //   links: {
+  //     linkToGithub: "https://github.com/infinite223/J-monkey",
+  //     linkToLiveapp:
+  //       "https://play.google.com/store/apps/details?id=com.infinite223.Flappymonkey",
+  //   },
+  // },
+  // {
+  //   name: "Work schedule (v2)",
+  //   slug: "work-schedule-v2",
+  //   description:
+  //     "Work schedule to aplikacja webowa, która umożliwia tworzenie grafiku pracy, zapraszanie pracowników i pozwala im zapisywać się na dyżury w wybrane dni i godziny.",
+  //   createdAt: new Date(),
+  //   type: "Web app",
+  //   technologies: [
+  //     myTechnologies[0],
+  //     myTechnologies[3],
+  //     myTechnologies[4],
+  //     myTechnologies[5],
+  //     myTechnologies[7],
+  //     myTechnologies[10],
+  //     myTechnologies[12],
+  //   ],
+  //   image: "workSchedule",
+  //   links: {
+  //     linkToGithub: "https://github.com/infinite223/J-monkey",
+  //     linkToLiveapp:
+  //       "https://play.google.com/store/apps/details?id=com.infinite223.Flappymonkey",
+  //   },
+  // },
+  // {
+  //   name: "Download songs",
+  //   slug: "download-songs",
+  //   description:
+  //     "Prosta aplikacja do wyszukiwania piosenek na YouTube i ich pobierania.",
+  //   createdAt: new Date(),
+  //   type: "Web app",
+  //   technologies: [myTechnologies[0], myTechnologies[11], myTechnologies[12]],
+  //   image: "downloadSongs",
+  //   links: {
+  //     linkToGithub: "https://github.com/infinite223/download-songs",
+  //     linkToLiveapp: "https://download-songs.netlify.app/",
+  //   },
+  // },
+  // {
+  //   name: "Shopping notes",
+  //   slug: "shopping-notes",
+  //   description:
+  //     "Shopping-notes to prosta aplikacja mobilna pozwalająca użytkownikom tworzyć listy zakupów. Produkty są automatycznie grupowane według sklepów i kategorii, co ułatwia zakupy.",
+  //   createdAt: new Date(),
+  //   type: "Mobile app",
+  //   technologies: [
+  //     myTechnologies[0],
+  //     myTechnologies[1],
+  //     myTechnologies[2],
+  //     myTechnologies[10],
+  //     myTechnologies[12],
+  //     myTechnologies[13],
+  //   ],
+  //   image: "shoppingNotes",
+  //   links: {
+  //     linkToGithub: "https://github.com/infinite223/Shopping-notes",
+  //     linkToLiveapp:
+  //       "https://play.google.com/store/apps/details?id=com.shopping.notes",
+  //   },
+  // },
 ];
 
 export const bestProjects: Project[] = [

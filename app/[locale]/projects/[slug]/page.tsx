@@ -14,6 +14,8 @@ import shoppingNotes from "../../../assets/shoppingNotes.png";
 import assetsTrackPlaceholder from "../../../assets/assets-track.png";
 import automotivePlacePlaceholder from "../../../assets/automotiveplace.png";
 import shiftmazeFull from "../../../assets/shiftmazeFull.png";
+import pizzaApp from "../../../assets/pizza-app.png";
+
 import { myProjects } from "../consts";
 
 type PageProps = {
@@ -44,6 +46,8 @@ function getImageByName(name: string) {
       return downloadSongs;
     case "shoppingNotes":
       return shoppingNotes;
+    case "pizza-app":
+      return pizzaApp;
     default:
       return scheduleApp;
   }

@@ -11,6 +11,7 @@ import shoppingNotes from "../../assets/shoppingNotes.png";
 import assetsTrackPlaceholder from "../../assets/assets-track.png";
 import automotivePlacePlaceholder from "../../assets/automotiveplace.png";
 import shiftmazeFull from "../../assets/shiftmazeFull.png";
+import pizzaApp from "../../assets/pizza-app.png";
 import { myProjects } from "./consts";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -37,6 +38,8 @@ function getImageByName(name: string) {
       return downloadSongs;
     case "shoppingNotes":
       return shoppingNotes;
+    case "pizza-app":
+      return pizzaApp;
     default:
       return scheduleApp;
   }
@@ -53,7 +56,7 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4 bg-white rounded-md p-6 shadow-sm max-md:p-3">
           {myProjects.map((p, i) => (
             <Link key={i} href={`/projects/${p.slug}`}>
-              <div className="relative group rounded-md overflow-hidden hover:cursor-pointer bg-zinc-100/90 aspect-square">
+              <div className="relative group rounded-md overflow-hidden hover:cursor-pointer bg-zinc-100/90 aspect-[3/2]">
                 <Image
                   alt={p.name}
                   src={getImageByName(p.image)}
