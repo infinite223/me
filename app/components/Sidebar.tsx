@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { LuUser, LuFolder, LuPackage, LuMail } from "react-icons/lu";
 import { ChevronRight, Menu, X } from "lucide-react";
-import Me from "../assets/me.jpg";
+import Me from "../assets/icon.png";
 import Image from "next/image";
 
 const iconSize = 23;
@@ -14,7 +14,6 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
-  // Zamykaj menu przy kliknięciu poza
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -32,7 +31,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Desktop */}
       <aside className="w-64 bg-white p-6 hidden md:flex flex-col rounded-xl sticky top-5 self-start h-[calc(100vh-40px)]">
         <div className="mb-12 flex items-center gap-3">
           <Image alt="me" src={Me} className="w-12 h-12 rounded-full" />
@@ -47,7 +45,6 @@ const Sidebar = () => {
         </div>
       </aside>
 
-      {/* Mobile top bar */}
       <div className="md:hidden bg-white flex justify-between rounded-md items-center px-4 py-3 h-min w-full shadow z-20 sticky top-5">
         <div className="flex items-center gap-3">
           <Image alt="me" src={Me} className="w-12 h-12 rounded-full" />
@@ -65,7 +62,6 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* Mobile sliding menu */}
       <div
         ref={mobileMenuRef}
         className={`md:hidden fixed bottom-0 left-0 w-full bg-white transition-all duration-300 z-10 shadow-xl ${
