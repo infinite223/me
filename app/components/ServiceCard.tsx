@@ -13,7 +13,7 @@ const ServiceCard = ({
   description,
   gradient,
 }: ServiceCardProps) => (
-  <div className="p-6 rounded-md shadow-sm hover:shadow-md transition-all bg-white flex flex-col items-start">
+  <div className="p-6 rounded-xl shadow-sm ring-1 ring-black/5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 bg-white flex flex-col items-start">
     <div className={`p-3 rounded-full ${gradient} mb-6 transition-all`}>
       <Icon className="w-8 h-8 text-blue-600" />
     </div>

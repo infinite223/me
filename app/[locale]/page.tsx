@@ -15,13 +15,13 @@ import {
 import { bestProjects } from "./projects/consts";
 import { ChevronRight } from "lucide-react";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
-import Image from "next/image";
 import scheduleApp from "../assets/scheduleApp.png";
 import carsdesignStart from "../assets/carsdesignStart.png";
 import kaban from "../assets/kaban_board_screen.png";
 import monkey from "../assets/monkey.png";
 import assetsTrackPlaceholder from "../assets/assets-track.png";
-import automotivePlacePlaceholder from "../assets/automotiveplace.png";
+import { automotiveCover } from "../assets/automotive-place";
+import ProjectCard from "@/app/components/ProjectCard";
 import shiftmazeFull from "../assets/shiftmazeFull.png";
 import { useTranslations } from "next-intl";
 
@@ -30,7 +30,7 @@ function getImageByName(name: string) {
     case "assetsTrack":
       return assetsTrackPlaceholder;
     case "automotivePlace":
-      return automotivePlacePlaceholder;
+      return automotiveCover;
     case "shiftmaze":
       return shiftmazeFull;
     case "carsdesignStart":
@@ -49,9 +49,9 @@ export default function HomePage() {
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col gap-6 md:px-6 pt-6">
+    <div className="flex flex-col gap-6 md:px-6 pt-6 animate-rise-in">
       {" "}
-      <div className="flex gap-2 items-center mb-2">
+      <div className="inline-flex self-start gap-2 items-center mb-2 rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-black/5">
         <span className="relative flex h-3 w-3">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
@@ -59,7 +59,9 @@ export default function HomePage() {
         <span className="font-semibold text-sm">Available for Projects</span>
       </div>
       <div className="flex w-full justify-between">
-        <h1 className="text-4xl font-bold">{t("main.title")}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zinc-900 via-zinc-800 to-cyan-700 bg-clip-text text-transparent">
+          {t("main.title")}
+        </h1>
       </div>
       <p className="mt-2 text-gray-600 max-w-4xl">{t("main.description")}</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -159,21 +161,13 @@ export default function HomePage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-md p-6 shadow-sm max-md:p-3">
         {bestProjects.map((p, i) => (
-          <Link key={i} href={`/projects/${p.slug}`}>
-            <div className="relative group rounded-md overflow-hidden hover:cursor-pointer bg-zinc-100/90 aspect-[3/2]">
-              <Image
-                alt={p.name}
-                src={getImageByName(p.image)}
-                fill
-                className="object-cover transition duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-85"
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-opacity-0 group-hover:bg-black/40 transition duration-300">
-                <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-2xl transition duration-300">
-                  {p.name}
-                </span>
-              </div>
-            </div>
-          </Link>
+          <ProjectCard
+            key={i}
+            name={p.name}
+            slug={p.slug}
+            src={getImageByName(p.image)}
+            contain={p.image === "automotivePlace"}
+          />
         ))}
       </div>
       <SectionFooter page="projects" title={t("sectionFooter.projects")} />
@@ -237,7 +231,12 @@ export default function HomePage() {
 }
 
 const SectionHeader = ({ title }: { title: string }) => {
-  return <h2 className="text-3xl font-semibold mt-4">{title}</h2>;
+  return (
+    <h2 className="flex items-center gap-3 text-3xl font-semibold mt-4">
+      <span className="h-7 w-1 rounded-full bg-gradient-to-b from-cyan-500 to-indigo-500" />
+      {title}
+    </h2>
+  );
 };
 
 const SectionFooter = ({ title, page }: { title: string; page: string }) => {

@@ -32,7 +32,7 @@ const StackCard = ({
   }
 
   return (
-    <div className="flex gap-3 flex-col bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all h-full border border-zinc-100">
+    <div className="flex gap-3 flex-col bg-white rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 h-full border border-zinc-100">
       <div className="flex gap-3 items-center">
         <div
           className="flex items-center justify-center w-10 h-10 rounded-lg flex-shrink-0"

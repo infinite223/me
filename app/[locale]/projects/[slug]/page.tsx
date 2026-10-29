@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Globe } from "lucide-react";
 import { FaGithub, FaGooglePlay } from "react-icons/fa";
+import ScreenshotGallery from "@/app/components/ScreenshotGallery";
 import StackCard from "@/app/components/StackCard";
 import scheduleApp from "../../../assets/scheduleApp.png";
 import carsdesignStart from "../../../assets/carsdesignStart.png";
@@ -12,7 +13,8 @@ import workSchedule from "../../../assets/workSchedule.png";
 import downloadSongs from "../../../assets/downloadSongs.png";
 import shoppingNotes from "../../../assets/shoppingNotes.png";
 import assetsTrackPlaceholder from "../../../assets/assets-track.png";
-import automotivePlacePlaceholder from "../../../assets/automotiveplace.png";
+import { automotiveCover, automotiveShots } from "../../../assets/automotive-place";
+import ProjectCard from "@/app/components/ProjectCard";
 import shiftmazeFull from "../../../assets/shiftmazeFull.png";
 import pizzaApp from "../../../assets/pizza-app.png";
 
@@ -29,7 +31,7 @@ function getImageByName(name: string) {
     case "assetsTrack":
       return assetsTrackPlaceholder;
     case "automotivePlace":
-      return automotivePlacePlaceholder;
+      return automotiveCover;
     case "shiftmaze":
       return shiftmazeFull;
     case "carsdesignStart":
@@ -110,8 +112,19 @@ export default async function ProjectDetails({ params }: PageProps) {
         <Image
           src={image}
           alt={project.name}
-          className="rounded-md mb-6 bg-zinc-200/50 w-full mt-5"
+          priority
+          className="rounded-md mb-6 bg-zinc-200/50 w-full mt-5 animate-rise-in"
         />
+        {project.slug === "automotive-place" && (
+          <>
+            <h2 className="text-2xl font-semibold mt-4 mb-4">
+              Ekrany aplikacji mobilnej
+            </h2>
+            <div className="mb-8">
+              <ScreenshotGallery shots={automotiveShots} />
+            </div>
+          </>
+        )}
         <h2 className="text-2xl font-semibold mt-4">Opis projektu</h2>
         <p className="mb-8 mt-4">{project.description}</p>
         <h2 className="text-2xl font-semibold mt-4">

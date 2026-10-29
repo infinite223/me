@@ -107,19 +107,21 @@ export const myProjects: Project[] = [
     name: "Automotive Place",
     slug: "automotive-place",
     description:
-      "Motoryzacyjna platforma społecznościowa dla pasjonatów tuningu i kultury samochodowej. Użytkownicy tworzą projekty swoich pojazdów (etapy modyfikacji, historia serwisowa, zdjęcia), publikują posty, organizują tripy i zaznaczają spoty na mapie.",
+      "Motoryzacyjna platforma społecznościowa dla pasjonatów tuningu i kultury samochodowej. Główną częścią jest aplikacja mobilna na Androida: użytkownicy tworzą projekty swoich pojazdów (etapy modyfikacji z wykresami osiągów, historia serwisowa, zdjęcia), pytają społeczność o usterki, organizują spotkania i zaznaczają spoty na mapie. Projekt można udostępnić jednym linkiem także osobom bez konta.",
     createdAt: new Date(),
-    type: "Web app",
+    type: "all",
     technologies: [
-      myTechnologies[0],
+      myTechnologies[1],
+      myTechnologies[2],
       myTechnologies[10],
-      myTechnologies[13],
       myTechnologies[3],
-      myTechnologies[5],
+      myTechnologies[0],
     ],
     image: "automotivePlace",
     links: {
       linkToLiveapp: "https://automotiveplace.pl",
+      linkToMobileApp:
+        "https://play.google.com/store/apps/details?id=com.infinite223.automotiveplace",
     },
   },
   {
